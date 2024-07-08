@@ -14,7 +14,10 @@
        width:100%;
        padding:40px;
        text-align-last: center;
-       font-size:20px !important;    
+       font-size:20px !important;   
+        background-color:"orange";
+        background:"https://wallpapers.com/images/hd/sad-emoji-balls-with-tear-drops-wl3kt48ubvrz4w0l.jpg";
+        background-size:cover;
     } 
 
     form{
@@ -31,7 +34,7 @@
 </head>
 <body>
 
-    <div class="center bg-warning"> 
+    <div class="center"> 
          <div class="block">
             <form action="">
                 <h2><label for="" class="text-dark">Digite á data de aniversario do kiosso !</label></h2>
@@ -47,19 +50,20 @@
    <script> 
       let input = document.querySelector("input");  
       let count = 0;
+       let link = "";
       let btn =  document.querySelector(".btn");
       btn.addEventListener("click" , (e)=>{ 
         e.preventDefault();
           if(input.value === "2001-05-31"){
               let ct = localStorage.getItem("count");
               if(ct !== undefined && ct !== null){
-                window.location.replace("https://drive.google.com/file/d/1mECe0ywdz1I7q28eGCE1du0G-_KVQ2gE/view?usp=sharing");                  
+                window.location.replace(link);                  
                 localStorage.setItem("count", 0);  
             } else {
                   if (ct*1 > 6){
                       alert("Lamentamos mas excedeu o limite de tentativas")
                   } else {
-                    window.location.replace("https://drive.google.com/file/d/1mECe0ywdz1I7q28eGCE1du0G-_KVQ2gE/view?usp=sharing");
+                    window.location.replace(link);
                   }
               } 
           } else { 
